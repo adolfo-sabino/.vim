@@ -44,7 +44,7 @@ endif
 
 " Syntax highlighting
 hi Keyword		ctermfg=111		cterm=none		guifg=#8ac6f2	gui=none
-hi Statement	ctermfg=111		cterm=none		guifg=#8ac6f2	gui=none
+hi Statement	ctermfg=111		cterm=bold		guifg=#8ac6f2	gui=none
 hi Constant		ctermfg=173		cterm=none		guifg=#e5786d	gui=none
 hi Number		ctermfg=173		cterm=none		guifg=#e5786d	gui=none
 hi PreProc		ctermfg=173		cterm=none		guifg=#e5786d	gui=none
