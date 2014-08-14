@@ -62,11 +62,15 @@ filetype plugin indent on      " load indent file for specific file type
 let g:user_emmet_leader_key='<C-e>'
 
 
+"
+" Key mappings
+" 
+
 " Use , as leader instead of \
 let mapleader=','
 
+" Toggle spellchecking
+map <silent> <C-s> :setlocal spell! spelllang=en<CR>
 
-" Key mappings
-map <C-s> :setlocal spell! spelllang=en<CR>
-
-
+" Get rid of search highlights 
+nnoremap <silent> <esc> :noh<CR><esc>
