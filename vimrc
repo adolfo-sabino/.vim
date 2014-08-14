@@ -21,6 +21,7 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set autoindent
+set foldmethod=syntax
 
 set completeopt=menu,menuone,longest  " Disable doc window on completion
 
@@ -58,8 +59,14 @@ filetype plugin indent on      " load indent file for specific file type
 
 
 " Emmet mode key
-let g:user_emmet_leader_key='<C-E>'
+let g:user_emmet_leader_key='<C-e>'
 
 
 " Use , as leader instead of \
 let mapleader=','
+
+
+" Key mappings
+map <C-s> :setlocal spell! spelllang=en<CR>
+
+
