@@ -3,6 +3,7 @@ set scrolloff=999       " center cursor vertically
 set t_Co=256            " enable 256 color mode
 set cursorline          " highlight current line
 set laststatus=2        " enable airline
+set ttimeoutlen=0       " fix delay on airline on mode switching
 
 set showcmd             " display incomplete commands
 set nobackup            " do not keep a backup file
@@ -68,7 +69,7 @@ let g:user_emmet_leader_key='<C-e>'
 let g:airline_powerline_fonts=1
 
 " Clear whitespace before saving
-au BufWritePre * :%s/\s\+$//g
+au BufWritePre * :%s/\s\+$//e
 
 
 "
