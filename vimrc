@@ -67,6 +67,7 @@ let g:user_emmet_leader_key='<C-e>'
 
 " Airline Setup
 let g:airline_powerline_fonts=1
+let g:airline_theme='zenburn'
 
 " Clear whitespace before saving
 au BufWritePre * :%s/\s\+$//e
