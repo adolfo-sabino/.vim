@@ -57,6 +57,10 @@ Plugin 'michaeljsmith/vim-indent-object'
 " C/C++
 Plugin 'Rip-Rip/clang_complete'
 
+" Org-Mode
+Plugin 'tpope/vim-speeddating'
+Plugin 'jceb/vim-orgmode'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -85,7 +89,7 @@ au BufWritePre * :%s/\s\+$//e
 let mapleader=','
 
 " Toggle spellchecking
-nnoremap <silent> <C-c> :setlocal spell! spelllang=en<cr>
+nnoremap <silent> <C-s> :setlocal spell! spelllang=en<cr>
 
 " Quicker way to quit insert mode
 imap jj <esc>
@@ -95,3 +99,6 @@ imap <leader>s <esc>:w<cr>
 
 " Get rid of search highlights
 nmap <C-h> :noh<cr>
+
+" Emacs-like TODO management for org-mode
+nmap <C-c><C-t> <S-right>
