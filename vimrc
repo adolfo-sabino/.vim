@@ -68,9 +68,9 @@ call vundle#end()
 
 filetype plugin indent on
 
-
-" Emmet mode key
-let g:user_emmet_leader_key='<C-e>'
+"
+" General customizations
+"
 
 " Airline Setup
 let g:airline_powerline_fonts=1                  " use powerline arrows
@@ -94,6 +94,9 @@ au BufWritePre * :%s/\s\+$//e
 
 " Use , as leader instead of \
 let mapleader=','
+
+" Emmet leader key
+let g:user_emmet_leader_key='<C-e>'
 
 " Toggle spellchecking
 nnoremap <silent> <C-s> :setlocal spell! spelllang=en<cr>
