@@ -24,8 +24,6 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set autoindent
-set cinoptions+=g0  " make C++ scope specifiers unindented
-set cinoptions+=(0  " make parenthesis align
 set foldmethod=syntax
 
 set completeopt=menu,menuone,longest  " Disable doc window on completion
@@ -46,11 +44,14 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Syntastic'
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 
 " Python
 Plugin 'davidhalter/jedi-vim'
