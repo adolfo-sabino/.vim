@@ -24,7 +24,6 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set autoindent
-set foldmethod=syntax
 
 set completeopt=menu,menuone,longest  " Disable doc window on completion
 
@@ -83,8 +82,10 @@ let g:airline#extensions#tabline#show_buffers=0  " hide buffers
 let g:airline#extensions#tabline#tab_min_count=2 " hide tabline for one tab
 
 " Enable :lnext for Syntastic
-let g:syntastic_auto_jump=1
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=0  " Don't show location list
+
+let g:syntastic_check_on_open=1
 
 " Clear whitespace before saving
 au BufWritePre * :%s/\s\+$//e
@@ -114,3 +115,29 @@ nmap <C-h> :noh<cr>
 
 " Emacs-like TODO management for org-mode
 nmap <C-c><C-t> <S-right>
+
+" Navigate syntastic error list
+function NextError()
+    try
+        try
+            lnext
+        catch /^Vim\%((\a\+)\)\=:E553/
+            lfirst
+        endtry
+    catch /^Vim\%((\a\+)\)\=:E42/
+    endtry
+endfunction
+
+function PrevError()
+    try
+        try
+            lNext
+        catch /^Vim\%((\a\+)\)\=:E553/
+            llast
+        endtry
+    catch /^Vim\%((\a\+)\)\=:E42/
+    endtry
+endfunction
+
+nmap <silent> <C-j> :call NextError()<cr>
+nmap <silent> <C-k> :call PrevError()<cr>
