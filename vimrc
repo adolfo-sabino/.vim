@@ -32,6 +32,8 @@ set backspace=indent,eol,start  " make that backspace key work the way it should
 
 set clipboard=unnamedplus  " make system clipboard work
 
+set omnifunc=syntaxcomplete#Complete
+
 syntax on
 
 colorscheme wombat256
