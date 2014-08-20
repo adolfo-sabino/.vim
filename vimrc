@@ -44,7 +44,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Syntastic'
+Plugin 'scrooloose/Syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
@@ -53,10 +53,15 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Townk/vim-autoclose'
 
 " Python
 Plugin 'davidhalter/jedi-vim'
 Plugin 'michaeljsmith/vim-indent-object'
+
+" Django
+Plugin 'django.vim'
 
 " C/C++
 Plugin 'Rip-Rip/clang_complete'
