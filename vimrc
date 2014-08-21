@@ -47,23 +47,19 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/Syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
-Plugin 'ervandew/supertab'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Townk/vim-autoclose'
+Plugin 'Valloric/YouCompleteMe'
 
 " Python
-Plugin 'davidhalter/jedi-vim'
 Plugin 'michaeljsmith/vim-indent-object'
 
 " Django
 Plugin 'django.vim'
-
-" C/C++
-Plugin 'Rip-Rip/clang_complete'
 
 " Org-Mode
 Plugin 'tpope/vim-speeddating'
@@ -86,7 +82,7 @@ let g:airline#extensions#tabline#show_buffers=0  " hide buffers
 let g:airline#extensions#tabline#tab_min_count=2 " hide tabline for one tab
 
 " Make SuperTab default behaviour nicer
-let g:SuperTabDefaultCompletionType="context"
+" let g:SuperTabDefaultCompletionType="context"
 
 " Enable :lnext for Syntastic
 let g:syntastic_always_populate_loc_list=1
@@ -96,6 +92,9 @@ let g:syntastic_check_on_open=1
 
 " Clear whitespace before saving
 au BufWritePre * :%s/\s\+$//e
+
+" Point to ycm configuration
+let g:ycm_global_ycm_extra_conf = '.vim/extra/.ycm_extra_conf.py'
 
 
 "
@@ -111,11 +110,8 @@ let g:user_emmet_leader_key='<C-e>'
 " Toggle spellchecking
 nnoremap <silent> <C-s> :setlocal spell! spelllang=en<cr>
 
-" Quicker way to quit insert mode
-imap jj <esc>
-
 " Quicker way to save from insert mode
-imap <leader>s <esc>:w<cr>
+imap :w <esc>:w
 
 " Get rid of search highlights
 nmap <C-h> :noh<cr>
