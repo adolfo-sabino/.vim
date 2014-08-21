@@ -53,7 +53,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'Townk/vim-autoclose'
 
 " Python
