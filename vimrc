@@ -144,3 +144,6 @@ endfunction
 
 nmap <silent> <C-j> :call NextError()<cr>
 nmap <silent> <C-k> :call PrevError()<cr>
+
+nmap gd :YcmCompleter GoToDefinition<CR>
+nmap gb <C-O>
