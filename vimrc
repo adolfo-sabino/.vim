@@ -96,6 +96,9 @@ au BufWritePre * :%s/\s\+$//e
 " Point to ycm configuration
 let g:ycm_global_ycm_extra_conf = '.vim/extra/.ycm_extra_conf.py'
 
+" Fix bug with YCM & autoclose
+let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
+
 
 "
 " Key mappings
