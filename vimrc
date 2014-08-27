@@ -150,3 +150,15 @@ nmap <silent> <C-k> :call PrevError()<cr>
 
 nmap gd :YcmCompleter GoToDefinition<CR>
 nmap gb <C-O>
+
+"
+" Gvim stuff
+"
+
+set guifont=Terminus\ 12
+set guioptions-=m  "remove menu bar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=R  "remove right-hand scroll bar
+set guioptions-=l  "remove right-hand scroll bar
+set guioptions-=L  "remove right-hand scroll bar
+set guioptions-=T  "remove toolbar
