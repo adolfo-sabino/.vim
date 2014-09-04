@@ -81,9 +81,6 @@ let g:airline#extensions#tabline#tab_nr_type=1   " show tab numbers
 let g:airline#extensions#tabline#show_buffers=0  " hide buffers
 let g:airline#extensions#tabline#tab_min_count=2 " hide tabline for one tab
 
-" Make SuperTab default behaviour nicer
-" let g:SuperTabDefaultCompletionType="context"
-
 " Enable :lnext for Syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=0  " Don't show location list
@@ -94,7 +91,10 @@ let g:syntastic_check_on_open=1
 au BufWritePre * :%s/\s\+$//e
 
 " Point to ycm configuration
-let g:ycm_global_ycm_extra_conf = '.vim/extra/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/extra/.ycm_extra_conf.py'
+let g:ycm_server_keep_logfiles=1
+let g:ycm_server_log_level='debug'
+let g:ycm_path_to_python_interpreter='/usr/bin/python2'
 
 " Fix bug with YCM & autoclose
 let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
