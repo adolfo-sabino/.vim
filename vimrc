@@ -10,6 +10,7 @@ set nobackup            " do not keep a backup file
 set number              " show line numbers
 set ruler               " show the current row and column
 set mouse=a             " adds mouse support
+set nowrap              " horizontal scrolling
 
 set hlsearch            " highlight searches
 set incsearch           " do incremental searching
