@@ -21,10 +21,11 @@ set smartcase           " no ignorecase if Uppercase char present
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell        " turn off visual bell
 
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set autoindent
+set expandtab           " Turn tabs into spaces
+set shiftwidth=4        " Make indentation width 4 spaces
+set softtabstop=4       " Make tab indent 4 spaces
+set autoindent          " Put the cursor at the correct indentation level
+set textwidth=72        " Wrap lines at column 72, more readable than 80
 
 set completeopt=menu,menuone,longest  " Disable doc window on completion
 
