@@ -26,6 +26,7 @@ set shiftwidth=4        " Make indentation width 4 spaces
 set softtabstop=4       " Make tab indent 4 spaces
 set autoindent          " Put the cursor at the correct indentation level
 set textwidth=72        " Wrap lines at column 72, more readable than 80
+set formatoptions=cq    " Disable automatic wrapping as you type
 
 set completeopt=menu,menuone,longest  " Disable doc window on completion
 
