@@ -114,6 +114,10 @@ let mapleader=','
 " Emmet leader key
 let g:user_emmet_leader_key='<C-e>'
 
+" Multiple cursor flexible exit
+let g:multi_cursor_exit_from_normal_mode=0
+let g:multi_cursor_exit_from_insert_mode=0
+
 " Toggle spellchecking
 nnoremap <silent> <C-s> :setlocal spell! spelllang=en<cr>
 
