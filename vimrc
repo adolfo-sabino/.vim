@@ -77,8 +77,8 @@ filetype plugin indent on
 "
 
 " Airline Setup
-let g:airline_powerline_fonts=1                  " use powerline arrows
 let g:airline_theme='zenburn'                    " nicer theme
+let g:airline_powerline_fonts=1                  " use powerline arrows
 let g:airline#extensions#tabline#enabled=1       " enable tabline support
 let g:airline#extensions#tabline#tab_nr_type=1   " show tab numbers
 let g:airline#extensions#tabline#show_buffers=0  " hide buffers
@@ -98,6 +98,7 @@ let g:ycm_global_ycm_extra_conf='~/.vim/extra/.ycm_extra_conf.py'
 let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level='debug'
 let g:ycm_path_to_python_interpreter='/usr/bin/python2'
+let g:ycm_show_diagnostics_ui=0
 
 " Fix bug with YCM & autoclose
 let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
