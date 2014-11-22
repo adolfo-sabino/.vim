@@ -68,8 +68,9 @@ Plugin 'django.vim'
 Plugin 'tpope/vim-speeddating'
 Plugin 'jceb/vim-orgmode'
 
-" Vastly improved Javascript indent
+" Javascript
 Plugin 'pangloss/vim-javascript'
+Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
 
