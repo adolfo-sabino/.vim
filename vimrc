@@ -75,8 +75,8 @@ Plugin 'marijnh/tern_for_vim'
 " BNF
 Plugin 'bnf.vim'
 
-" Nim
-Plugin 'zah/nimrod.vim'
+" Rust
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 
