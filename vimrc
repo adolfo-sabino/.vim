@@ -72,6 +72,12 @@ Plugin 'jceb/vim-orgmode'
 Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 
+" BNF
+Plugin 'bnf.vim'
+
+" Nim
+Plugin 'zah/nimrod.vim'
+
 call vundle#end()
 
 filetype plugin indent on
