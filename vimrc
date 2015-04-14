@@ -137,8 +137,9 @@ imap :w <esc>:w
 " Get rid of search highlights
 nmap <C-h> :noh<cr>
 
-" Emacs-like TODO management for org-mode
-nmap <C-c><C-t> <S-right>
+nmap <C-c> :!roxterm . &<cr><cr>
+
+"
 
 " Navigate syntastic error list
 function NextError()
@@ -180,3 +181,4 @@ set guioptions-=R  "remove right-hand scroll bar
 set guioptions-=l  "remove right-hand scroll bar
 set guioptions-=L  "remove right-hand scroll bar
 set guioptions-=T  "remove toolbar
+
