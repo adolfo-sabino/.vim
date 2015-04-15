@@ -170,6 +170,9 @@ nmap <silent> <C-k> :call PrevError()<cr>
 nmap gd :YcmCompleter GoToDefinition<CR>
 nmap gb <C-O>
 
+nnoremap / /\v
+vnoremap / /\v
+
 "
 " Gvim stuff
 "
