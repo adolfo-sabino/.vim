@@ -7,6 +7,6 @@ nmap <leader>C :!nosetests --with-coverage --cover-erase --cover-package .<CR>
 nmap <leader>c :!nosetests --with-coverage --cover-erase --cover-package %<CR>
 
 nmap <leader>r :!python %<CR>
-nmap <leader>R :!ipython -i %<CR>
+nmap <leader>R :!python -i %<CR>
 
-let g:syntastic_python_checkers = ['python', 'flake8']
+let g:syntastic_python_checkers = ['python', 'flake8', 'pylint']
