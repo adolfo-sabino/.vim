@@ -60,6 +60,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 " Python
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'lepture/vim-jinja'
 
 " Django
 Plugin 'django.vim'
