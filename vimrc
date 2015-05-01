@@ -60,6 +60,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 " Python
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'lepture/vim-jinja'
 
 " Django
 Plugin 'django.vim'
@@ -184,4 +185,3 @@ set guioptions-=R  "remove right-hand scroll bar
 set guioptions-=l  "remove right-hand scroll bar
 set guioptions-=L  "remove right-hand scroll bar
 set guioptions-=T  "remove toolbar
-
