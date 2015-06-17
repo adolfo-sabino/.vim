@@ -71,7 +71,6 @@ Plugin 'jceb/vim-orgmode'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
-Plugin 'marijnh/tern_for_vim'
 
 " BNF
 Plugin 'bnf.vim'
@@ -113,7 +112,6 @@ let g:ycm_show_diagnostics_ui=0
 
 " Fix bug with YCM & autoclose
 let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
-
 
 "
 " Key mappings
@@ -168,7 +166,7 @@ endfunction
 nmap <silent> <C-j> :call NextError()<cr>
 nmap <silent> <C-k> :call PrevError()<cr>
 
-nmap gd :YcmCompleter GoToDefinition<CR>
+nmap gd :YcmCompleter GoTo<CR>
 nmap gb <C-O>
 
 nnoremap / /\v
