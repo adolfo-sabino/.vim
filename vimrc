@@ -48,7 +48,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/Syntastic'
-Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-repeat'
@@ -57,6 +56,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Townk/vim-autoclose'
 Plugin 'Valloric/YouCompleteMe'
+
+" Crazy japanese guy awesome plugins
+Plugin 'osyo-manga/vim-over'
 
 " Python
 Plugin 'michaeljsmith/vim-indent-object'
@@ -86,7 +88,7 @@ filetype plugin indent on
 " General customizations
 "
 
-" Airline Setup
+" airline Setup
 let g:airline_theme='zenburn'                    " nicer theme
 let g:airline_powerline_fonts=1                  " use powerline arrows
 let g:airline#extensions#tabline#enabled=1       " enable tabline support
@@ -120,9 +122,6 @@ let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 " Use , as leader instead of \
 let mapleader=','
 
-" Emmet leader key
-let g:user_emmet_leader_key='<C-e>'
-
 " Multiple cursor flexible exit
 let g:multi_cursor_exit_from_normal_mode=0
 let g:multi_cursor_exit_from_insert_mode=0
@@ -136,9 +135,8 @@ imap :w <esc>:w
 " Get rid of search highlights
 nmap <C-h> :noh<cr>
 
-nmap <C-c> :!roxterm . &<cr><cr>
-
-"
+" Open terminal in the current dir
+nmap <C-c> :!sakura . &<cr><cr>
 
 " Navigate syntastic error list
 function NextError()
@@ -169,8 +167,26 @@ nmap <silent> <C-k> :call PrevError()<cr>
 nmap gd :YcmCompleter GoTo<CR>
 nmap gb <C-O>
 
+" No-magic search
 nnoremap / /\v
 vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
+
+" Easier movement in command line mode
+cnoremap <c-h> <left>
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+cnoremap <c-l> <right>
+cnoremap ^     <home>
+cnoremap $     <end>
+
+
+" Vim over search by default
+nnoremap :s :OverCommandLine<CR>s
+nnoremap :%s :OverCommandLine<CR>%s
+nnoremap :g :OverCommandLine<CR>g
+nnoremap :%g :OverCommandLine<CR>%g
 
 "
 " Gvim stuff
