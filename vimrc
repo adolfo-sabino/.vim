@@ -55,8 +55,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Townk/vim-autoclose'
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'msanders/snipmate.vim'
 Plugin 'ervandew/supertab'
 
 " Python
@@ -86,10 +84,9 @@ filetype plugin indent on
 
 "
 " General customizations
-"
 
-" Setup supertab completion
-let g:SuperTabDefaultCompletionType = "context"
+" SuperTab use omnicompletion always
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
 " airline Setup
 let g:airline_theme='zenburn'                    " nicer theme
@@ -157,7 +154,7 @@ endfunction
 nmap <silent> <C-j> :call NextError()<cr>
 nmap <silent> <C-k> :call PrevError()<cr>
 
-nmap gb <C-O>
+nmap <leader>b <C-O>
 
 " No-magic search
 nnoremap / /\v
