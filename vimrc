@@ -55,14 +55,14 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Townk/vim-autoclose'
-Plugin 'Valloric/YouCompleteMe'
-
-" Crazy japanese guy awesome plugins
-Plugin 'osyo-manga/vim-over'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'msanders/snipmate.vim'
+Plugin 'ervandew/supertab'
 
 " Python
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'lepture/vim-jinja'
+Plugin 'davidhalter/jedi-vim'
 
 " Django
 Plugin 'django.vim'
@@ -88,6 +88,9 @@ filetype plugin indent on
 " General customizations
 "
 
+" Setup supertab completion
+let g:SuperTabDefaultCompletionType = "context"
+
 " airline Setup
 let g:airline_theme='zenburn'                    " nicer theme
 let g:airline_powerline_fonts=1                  " use powerline arrows
@@ -104,16 +107,6 @@ let g:syntastic_check_on_open=1
 
 " Clear whitespace before saving
 au BufWritePre * :%s/\s\+$//e
-
-" Point to ycm configuration
-let g:ycm_global_ycm_extra_conf='~/.vim/extra/.ycm_extra_conf.py'
-let g:ycm_server_keep_logfiles=1
-let g:ycm_server_log_level='debug'
-let g:ycm_path_to_python_interpreter='/usr/bin/python2'
-let g:ycm_show_diagnostics_ui=0
-
-" Fix bug with YCM & autoclose
-let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
 
 "
 " Key mappings
@@ -164,7 +157,6 @@ endfunction
 nmap <silent> <C-j> :call NextError()<cr>
 nmap <silent> <C-k> :call PrevError()<cr>
 
-nmap gd :YcmCompleter GoTo<CR>
 nmap gb <C-O>
 
 " No-magic search
@@ -178,15 +170,8 @@ cnoremap <c-h> <left>
 cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
-cnoremap ^     <home>
-cnoremap $     <end>
-
-
-" Vim over search by default
-nnoremap :s :OverCommandLine<CR>s
-nnoremap :%s :OverCommandLine<CR>%s
-nnoremap :g :OverCommandLine<CR>g
-nnoremap :%g :OverCommandLine<CR>%g
+cnoremap <c-H> <home>
+cnoremap <c-L> <end>
 
 "
 " Gvim stuff
