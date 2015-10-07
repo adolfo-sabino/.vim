@@ -65,18 +65,8 @@ Plugin 'davidhalter/jedi-vim'
 " Django
 Plugin 'django.vim'
 
-" Org-Mode
-Plugin 'tpope/vim-speeddating'
-Plugin 'jceb/vim-orgmode'
-
 " Javascript
 Plugin 'pangloss/vim-javascript'
-
-" BNF
-Plugin 'bnf.vim'
-
-" Rust
-Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 
@@ -99,15 +89,14 @@ let g:airline#extensions#tabline#tab_min_count=2 " hide tabline for one tab
 " Enable :lnext for Syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=0  " Don't show location list
-
 let g:syntastic_check_on_open=1
-
-" Clear whitespace before saving
-au BufWritePre * :%s/\s\+$//e
 
 "
 " Key mappings
 "
+
+" Clear whitespace before saving
+au BufWritePre * :%s/\s\+$//e
 
 " Use , as leader instead of \
 let mapleader=','
@@ -115,9 +104,6 @@ let mapleader=','
 " Multiple cursor flexible exit
 let g:multi_cursor_exit_from_normal_mode=0
 let g:multi_cursor_exit_from_insert_mode=0
-
-" Toggle spellchecking
-nnoremap <silent> <C-s> :setlocal spell! spelllang=en<cr>
 
 " Quicker way to save from insert mode
 imap :w <esc>:w
@@ -167,8 +153,9 @@ cnoremap <c-h> <left>
 cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
-cnoremap <c-H> <home>
-cnoremap <c-L> <end>
+
+" Confirm autocompletion with enter
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 "
 " Gvim stuff
