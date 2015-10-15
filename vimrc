@@ -59,11 +59,8 @@ Plugin 'ervandew/supertab'
 
 " Python
 Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'lepture/vim-jinja'
 Plugin 'davidhalter/jedi-vim'
-
-" Django
-Plugin 'django.vim'
+Plugin 'lepture/vim-jinja'
 
 " Javascript
 Plugin 'pangloss/vim-javascript'
@@ -105,14 +102,8 @@ let mapleader=','
 let g:multi_cursor_exit_from_normal_mode=0
 let g:multi_cursor_exit_from_insert_mode=0
 
-" Quicker way to save from insert mode
-imap :w <esc>:w
-
 " Get rid of search highlights
 nmap <C-h> :noh<cr>
-
-" Open terminal in the current dir
-nmap <C-c> :!sakura . &<cr><cr>
 
 " Navigate syntastic error list
 function NextError()
@@ -140,22 +131,7 @@ endfunction
 nmap <silent> <C-j> :call NextError()<cr>
 nmap <silent> <C-k> :call PrevError()<cr>
 
-nmap <leader>b <C-O>
-
-" No-magic search
-nnoremap / /\v
-vnoremap / /\v
-nnoremap ? ?\v
-vnoremap ? ?\v
-
-" Easier movement in command line mode
-cnoremap <c-h> <left>
-cnoremap <c-j> <down>
-cnoremap <c-k> <up>
-cnoremap <c-l> <right>
-
-" Confirm autocompletion with enter
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+nmap <silent> <leader>b <C-O>
 
 "
 " Gvim stuff
