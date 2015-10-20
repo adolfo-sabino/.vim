@@ -28,13 +28,9 @@ set autoindent          " Put the cursor at the correct indentation level
 set textwidth=72        " Wrap lines at column 72, more readable than 80
 set formatoptions=cq    " Disable automatic wrapping as you type
 
-set completeopt=menu,menuone,longest  " Disable doc window on completion
-
 set backspace=indent,eol,start  " make that backspace key work the way it should
 
 set clipboard=unnamedplus  " make system clipboard work
-
-set omnifunc=syntaxcomplete#Complete
 
 syntax on
 
@@ -55,6 +51,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Townk/vim-autoclose'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 
 " Python
@@ -71,9 +68,31 @@ filetype plugin indent on
 
 "
 " General customizations
+"
 
-" SuperTab use omnicompletion always
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+" Autocompletion
+set omnifunc=syntaxcomplete#Complete
+set completeopt=menu,menuone,longest  " Disable doc window on completion
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Accept completion with CR
+inoremap <silent> <CR> <C-r>=<SID>cr_accept()<CR>
+function! s:cr_accept()
+    return (pumvisible() ? "\<C-y>" : "\<CR>")
+endfunction
+
+imap <silent> <NUL> <C-x><C-o>
+
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+
 
 " airline Setup
 let g:airline_theme='zenburn'                    " nicer theme
