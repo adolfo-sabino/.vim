@@ -1,5 +1,5 @@
-Edric Garran's Amazing Vim Configuration
-========================================
+Edric Garran's Vim Configuration
+================================
 
 Dependencies
 ------------
@@ -26,3 +26,8 @@ vim +BundleInstall +qall
 cd bundle/tern_for_vim
 npm install
 ```
+
+Bugs
+----
+* ncurses currently has a bug where stderr output glitches up
+  everything, so it's recommended to run vim with 2>/dev/null
