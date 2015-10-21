@@ -3,9 +3,12 @@ Edric Garran's Amazing Vim Configuration
 
 Dependencies
 ------------
-vim built with python2, python3 and lua (optional for neocomplete) support
-clang (optional for C++ autocompletion)
-nodejs/npm (optional for javascript autocompletion)
+* vim (7.4+) with flags
+  - python2interp
+  - python3interp
+  - luainterp (optional for neocomplete)
+* clang (optional for C++ autocompletion)
+* nodejs/npm (optional for javascript autocompletion)
 
 
 Installation instructions
