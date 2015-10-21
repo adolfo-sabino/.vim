@@ -35,7 +35,6 @@ set clipboard=unnamedplus  " make system clipboard work
 syntax on
 
 colorscheme wombat256
-set background=dark
 
 " Setup Vundle
 filetype off
