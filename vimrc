@@ -35,6 +35,7 @@ set clipboard=unnamedplus  " make system clipboard work
 syntax on
 
 colorscheme wombat256
+set background=dark
 
 " Setup Vundle
 filetype off
@@ -59,8 +60,13 @@ Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'lepture/vim-jinja'
 
-" Javascript
+" Web
 Plugin 'pangloss/vim-javascript'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'othree/html5.vim'
+
+" C++
+Plugin 'Rip-Rip/clang_complete'
 
 call vundle#end()
 
@@ -71,6 +77,7 @@ filetype plugin indent on
 "
 
 " Autocompletion
+set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,menuone,longest  " Disable doc window on completion
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
