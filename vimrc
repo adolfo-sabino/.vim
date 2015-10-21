@@ -46,7 +46,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/Syntastic'
 Plugin 'bling/vim-airline'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -54,6 +53,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'Townk/vim-autoclose'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Python
 Plugin 'michaeljsmith/vim-indent-object'
@@ -76,19 +76,18 @@ filetype plugin indent on
 " General customizations
 "
 
+
 " Autocompletion
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,menuone,longest  " Disable doc window on completion
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#disable_auto_complete = 1
 let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 2
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
-" Accept completion with CR
-inoremap <silent> <CR> <C-r>=<SID>cr_accept()<CR>
-function! s:cr_accept()
-    return (pumvisible() ? "\<C-y>" : "\<CR>")
+inoremap <silent> <cr> <C-r>=<SID>accept_completion()<cr>
+function! s:accept_completion()
+    return (pumvisible() ? "\<C-y>" : "\<cr>")
 endfunction
 
 " Map C-Space to autocompletion
