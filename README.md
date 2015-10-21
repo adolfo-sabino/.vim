@@ -10,7 +10,7 @@ nodejs/npm (optional for javascript autocompletion)
 
 Installation instructions
 -------------------------
-```syntax bash
+```bash
 cd ~
 git clone git@github.com:edricgarran/.vim.git
 cd ~/.vim/
