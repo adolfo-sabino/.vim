@@ -71,7 +71,6 @@ filetype plugin indent on
 "
 
 " Autocompletion
-set omnifunc=syntaxcomplete#Complete
 set completeopt=menu,menuone,longest  " Disable doc window on completion
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
@@ -85,9 +84,10 @@ function! s:cr_accept()
     return (pumvisible() ? "\<C-y>" : "\<CR>")
 endfunction
 
+" Map C-Space to autocompletion
 imap <silent> <NUL> <C-x><C-o>
 
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType = "context"
 
 if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns = {}
