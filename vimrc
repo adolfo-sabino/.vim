@@ -92,7 +92,7 @@ endfunction
 " Map C-Space to autocompletion
 imap <silent> <NUL> <C-x><C-o>
 
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns = {}
