@@ -157,6 +157,8 @@ nmap <silent> <C-k> :call PrevError()<cr>
 
 nmap <silent> <leader>b <C-O>
 
+inoremap :w <esc>:w
+
 "
 " Gvim stuff
 "
