@@ -130,7 +130,7 @@ let g:multi_cursor_exit_from_insert_mode=0
 nmap <C-h> :noh<cr>
 
 " Navigate syntastic error list
-function NextError()
+function! NextError()
     try
         try
             lnext
@@ -141,7 +141,7 @@ function NextError()
     endtry
 endfunction
 
-function PrevError()
+function! PrevError()
     try
         try
             lNext
@@ -158,6 +158,8 @@ nmap <silent> <C-k> :call PrevError()<cr>
 nmap <silent> <leader>b <C-O>
 
 inoremap :w <esc>:w
+
+nnoremap / /\v
 
 "
 " Gvim stuff
