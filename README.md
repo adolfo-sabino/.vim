@@ -29,5 +29,17 @@ npm install
 
 Bugs
 ----
-* ncurses currently has a bug where stderr output glitches up
-  everything, so it's recommended to run vim with 2>/dev/null
+clang_complete interacts badly with ncurses 6. If you experience
+glitches in C/C++ files, apply this patch in bundle/clang_complete:
+
+    diff --git a/plugin/clang/cindex.py b/plugin/clang/cindex.py
+    index eb05560..bfeb58d 100644
+    --- a/plugin/clang/cindex.py
+    +++ b/plugin/clang/cindex.py
+    @@ -1991,6 +1991,7 @@ class TranslationUnit(ClangObject):
+             if args is None:
+                 args = []
+
+    +        args.append('-fno-color-diagnostics')
+             if unsaved_files is None:
+                 unsaved_files = []
