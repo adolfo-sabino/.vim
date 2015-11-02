@@ -2,8 +2,10 @@
 au BufWritePre * :%s/\s\+$//e
 
 " Get rid of search highlights
-nmap <silent> <C-h> :noh<cr>
-" Easier way to go to last mark
+nmap <silent> <leader>h :noh<cr>
+nmap <silent> <leader>H mhn`h
+
+" Easier way to go toklast mark
 nmap <silent> <leader>b <C-O>
 " shortcut to saving from insert mode
 inoremap :w <esc>:w
