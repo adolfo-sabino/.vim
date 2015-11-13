@@ -34,3 +34,4 @@ source ~/.vim/plugins_config/airline.vim
 source ~/.vim/plugins_config/syntastic.vim
 source ~/.vim/plugins_config/multicursor.vim
 source ~/.vim/plugins_config/supertab.vim
+source ~/.vim/plugins_config/jedi.vim
